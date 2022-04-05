@@ -1,0 +1,298 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\graphicspath{ {FranckHertz/} }
+\usepackage{setspace}
+\usepackage{float}
+\usepackage{comment}
+\doublespacing
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist 
+\begin{document}
+	\begin{center}
+		\textbf{\underline{Higgs mechanism}}
+		
+		Anish Mitra
+		
+		\textit{Department of Physics, Case Western Reserve University, Cleveland, Ohio 44106, USA }
+		
+		(27 March 2018)
+		
+	\end{center}
+
+\begin{changemargin}{1.5cm}{1.5cm} 	
+Lorentz covariant field theories produce massless particles when spontaneous breakdown of symmetry occurs under an internal Lie Group according to the Goldstone theorem. However, when there is local gauge invariance, vector bosons “eat” Goldstone bosons and thus acquire mass as well as a third longitudinal degree of freedom. The mechanism by which the Goldstone bosons gets “eaten” is known as the Higgs mechanism and was proved almost simultaneously in three separate ways in 1964 by a total of 6 different physicists.
+\end{changemargin}
+\begin{flushleft}
+\textbf{\underline{Introduction}}
+\end{flushleft}
+Before 1964, the Goldstone theorem was the biggest obstacle to the completion of the standard model. It was not known where the mass of the vector bosons came from and therefore the standard model was an incomplete theory. In 1964, a total of 6 physicists spread across three different groups(Robert Brout and François Englert, Peter Higgs, and Gerald Guralnik, C. Richard Hagen, and Tom Kibble) proved the Higgs mechanism. The Higgs mechanism is triggered when the Higgs field causes spontaneous symmetry breaking during interactions and thus gives the vector bosons mass. It  must be noted though that this symmetry breaking would usually lead to the Goldstone bosons without the presence of gauge fields. However, it is the combination of gauge invariance and spontaneous symmetry breaking that allows the vector bosons to gain mass.
+The first step in understanding how the Higgs mechanism works is to become familiar with Lagrangian densities. 
+\begin{flushleft}	
+\textbf{\underline{Body}}
+\end{flushleft}
+We know from classical mechanics that the Lagrangian is simply the kinetic energy minus the potential energy or 
+\begin{equation}
+L = T-U
+\end{equation}
+However, in particle mechanics, we will be using the Lagrangian density L . We are also familiar with the Euler-Lagrange equations given below 
+\begin{equation}
+\frac{d}{dt}(\frac{\partial{L}}{\partial{\dot{q}}}) = \frac{\partial{L}}{\partial{q}}
+\end{equation}
+Where the Lagrangian is a function of both position(q1=x, q2=y, q3=z etc) and velocity (q̇1=vx, q̇2=vy,q̇3=vz). In particle mechanics, a different albeit similar formulation has to be used as we are interested in fields which are functions of position and time which we denote as 𝜙i(x,y,z,t). Using four-vector notation, we can restate the Euler-lagrange equations as 
+
+\begin{equation}
+\partial_\mu{( \frac{\partial{L}}{\partial(\partial_\mu\phi_i)})}=\frac{\partial{L}}{\partial{\phi_i}}
+\end{equation}
+	
+As a reminder, four-vector notation means that 
+\begin{equation}
+	\partial_0=\frac{1}{c}\frac{\partial}{\partial{t}}
+\end{equation}
+\begin{equation}
+\partial_x=\frac{\partial}{\partial{x}}
+\end{equation}	
+
+\begin{equation}
+\partial_y=\frac{\partial}{\partial{y}}
+\end{equation}	
+
+\begin{equation}
+\partial_z=\frac{\partial}{\partial{z}}
+\end{equation}	
+In classical mechanics, Lagrangians are usually derived. However, in relativistic field theory Lagrangians are taken as axiomatic, therefore let us start with the Lagrangian in equation (5)
+
+\begin{equation}
+\mathcal{L}=\frac{1}{2}(\partial_\mu\phi)(\partial^\mu\phi)+e^{(\alpha\phi)^2}
+\end{equation}
+which describes a scalar field with $(\partial_\mu)=(\partial^\mu)$. Now, at first the field may seem to be massless when compared the Klein-Gordon equation(see Appendix A). However if we Taylor expand the  $\frac{\partial{L}}{\partial{\phi_i}}$ term using 
+
+\begin{equation}
+	e^{(\alpha\phi)^2}=1-(\alpha\phi)^2+\frac{(\alpha\phi)^4}{2}-\frac{(\alpha\phi)^6}{6}...
+\end{equation}
+
+we would get
+
+\begin{equation}
+\mathcal{L}=(\partial_\mu\phi)(\partial^\mu\phi)+1-(\alpha\phi)^2+\frac{(\alpha\phi)^4}{2}-\frac{(\alpha\phi)^6}{6}...
+\end{equation}
+
+Where the $(\alpha\phi)^2$ term looks exactly like the mass term in the Klein-Gordon Lagrangian. This essentially means that $ \alpha^2 = (mc/h)^2/2$ and so our mass term is equal to $m=\surd{2}h\alpha/c$. However, finding the mass term is not always as easy. Let us take the Lagrangian in equation (11)
+
+
+\begin{equation}
+\mathcal{L}=\frac{(\partial_\mu\phi)(\partial^\mu\phi)}{2}+\frac{(\mu\phi)^2}{2}-\frac{(\lambda^2\phi^4)^2}{4}
+\end{equation}
+Comparing it to the Klein-Gordon Lagrangian we see that the mass term is imaginary. The reason why this happens is due to perturbation theory. So far, every Lagrangian we have seen have their ground states equal to 0. However, this Lagrangian does not. We can prove this by taking a look at its potential energy term below
+
+\begin{equation}
+U(\phi)=\frac{(\mu\phi)^2}{2}-\frac{(\lambda^2\phi^4)^2}{4}
+\end{equation}
+
+Now, the potential energy graph is as shown in figure 1 where we can easily find the values of $\phi$ to be minimum at /after doing the calculus shown below it
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.7]{minimum.png}
+	\end{center}
+	\caption{Graph of potential energy against wavefunction}
+	\label{fig:figure1}
+	\cite{ts}
+\end{figure}
+
+We can find the minima of the potential energy by taking the derivative of the potential energy $\frac{\partial{U(\phi)}}{\partial(\phi)}$ which is $-\mu^2\phi+\lambda^2\phi^3$ and then solve for $\phi$ which would give us 
+
+
+\begin{equation}
+	\phi=\pm\mu/\lambda
+\end{equation}
+
+This perturbation is used to define a new variable $\eta$ which takes the perturbation into effect. As such,
+
+\begin{equation}
+\eta=\phi\pm\mu/\lambda
+\end{equation}
+
+When we use $\eta$ instead of $\mu$ we get 
+
+\begin{equation}
+\eta=\phi\pm\mu/\lambda
+\end{equation}
+
+which when plugged into the lagrangian in equation (11) gives us
+
+\begin{equation}
+\mathcal{L}=\frac{(\partial_\mu\eta)(\partial^\mu\eta)}{2}-(\mu\eta)^2\pm\mu\lambda\eta^3-\frac{\lambda^2\eta^4}{4}+\frac{\mu^4}{\lambda^24}
+\end{equation}
+
+where the mass term now has the correct sign when compared to the Klein-Gordon Lagrangian. The value of the mass term is equal to 
+
+\begin{equation}
+m=\frac{\surd{2}h\eta}{c}
+\end{equation}
+
+where are rearraning the equation 
+
+\begin{equation}
+\eta^2 = \frac{(mc/h)^2}{2}
+\end{equation}
+
+as previously done except with $\eta$ instead of $\mu$. Now that we know how to determine the mass term by comparing it to the Lagrangian of the Klein-Gordon equation after expanding it about its ground state(not necessary if the ground state is equal to 0), we can now talk about spontaneous symmetry breaking. An example of spontaneous symmetry breaking is a plastic ruler. Originally, the ruler was symmetric about its center but if you break it in half, the ruler will either buckle to the left or right. This is analogous to the continuous case of spontaneous symmetry breaking. As shown by the graph below, the potential energy function is invariant under rotations in $\phi1,\phi2$ space for the Lagrangian given in equation() 
+
+\begin{equation}
+	\mathcal{L}=\frac{(\partial_\mu\phi_1)(\partial^\mu\phi_1)}{2}+\frac{(\partial_\mu\phi_2)(\partial^\mu\phi_2)}{2}+\frac{\mu^2(\phi_2^2+\phi_1^2)}{2}+\frac{\lambda^2(\phi_2^2+\phi_1^2)^2}{4}
+\end{equation}
+
+It is very important to know that we have not changed equation (). This is simply an equation which has two fields instead of one. These fields are invariant in rotations of $\phi_1,\phi_2$ space. The minima of these values in $\phi_1,\phi_2$ space is governed by equation ()
+
+\begin{equation}
+\phi_2^2+\phi_1^2=(\mu/\lambda)^2
+\end{equation}
+
+and its potential energy is given by
+
+\begin{equation}
+U(\phi_1,\phi_2)=-\frac{\mu^2(\phi_1+\phi_2)^2}{2}+\frac{\lambda^4(\phi_1^2+\phi_2^2)^2}{4}
+\end{equation}
+
+which when graphed looks like
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.7]{potentialfunction.png}
+	\end{center}
+	\caption{Graph of potential energy against wavefunction}
+	\label{fig:figure2}
+	\cite{ts}
+\end{figure}
+
+The easiest way to take a $\phi_1$ and $\phi_2$  which satisfy the equation governing the circle of minima	is to take 
+
+\begin{equation}
+\phi_1=\mu/\lambda
+\end{equation}	
+	
+\begin{equation}
+\phi_2=0
+\end{equation}	
+	
+as perturbations. We can now create new variables like we did earlier with
+
+\begin{equation}
+\xi=\phi_2
+\end{equation} 	
+	
+\begin{equation}
+\eta=\phi_1\pm\mu/\lambda
+\end{equation}
+
+adding in the perturbations. Consequently, we get the relations
+
+\begin{equation}
+\partial_\mu\phi_1=\partial_\mu\eta
+\end{equation}
+\begin{equation}
+\partial_\mu\phi_2=\partial_\mu\xi
+\end{equation}
+\begin{equation}
+(\phi_2+\phi_1)^2=\eta^2+2\frac{\eta\mu}{\lambda}+(\mu/\lambda)^2+\xi^2
+\end{equation}
+
+Plugging in these relations to the Lagrangian with two fields,
+
+\begin{equation}
+\mathcal{L}=\frac{(\partial_\mu\eta)(\partial^\mu\eta)}{2}+\frac{(\partial_\mu\xi)(\partial^\mu\xi)}{2}+\frac{\mu^2(\eta^2+2\frac{\eta\mu}{\lambda}+(\mu/\lambda)^2+\xi^2)}{2}-\frac{\lambda^2(\eta^2+2\frac{\eta\mu}{\lambda}+(\mu/\lambda)^2+\xi^2)^2}{4}
+\end{equation}
+
+Once we expand this, we get
+
+\begin{equation}
+\mathcal{L}=\frac{(\partial_\mu\eta)(\partial^\mu\eta)}{2}+\frac{(\partial_\mu\xi)(\partial^\mu\xi)}{2}+\frac{\mu^2(\eta^2)}{2}+{\eta\mu}{\lambda}+\frac{(\mu/\lambda)^2}{2}+\frac{\xi^2)}{2}+-\frac{\lambda^2}{4}[{\eta^4
+\\+4\frac{\eta^2\mu^2}{\lambda^2}+(\mu/\lambda)^4+\xi^4+4\frac{\eta^3\mu}{\lambda}+2\frac{\eta^2\mu^2}{\lambda^2}+2(\eta\xi)^2+4\frac{\eta}{\mu/\lambda}^3+4\frac{\eta\xi^2\mu}{\lambda}+2\frac{(\eta\mu)^2}{\lambda}}]
+\end{equation} 
+
+Finally, if we group the terms as shown below,
+
+\begin{equation}
+\mathcal{L}=[\frac{(\partial_\mu\eta)(\partial^\mu\eta)}{2}-(\mu\eta)^2]+[\frac{(\partial_\mu\xi)(\partial^\mu\xi)}{2}]+(\frac{\lambda(\eta+\xi)}{2})^2-\lambda\mu(\eta^3+\eta\xi^2)+\frac{\mu^4}{4\lambda^2}
+\end{equation}
+
+We see there are five coupling terms shown in figure () and we know that the constant term is irrelevant in Euler-Lagrange equations. What is important to notice here is that one of the fields is massless. This is the exact statement of the Goldstone theorem. It states that when we spontnaeously break a continuous global symmetry, it will also produce a massless particle. These particles are known as Goldstone bosons. However, the problem arises when we realize that there is no known massless boson which is also a scalar. This implied that either the Klein-Gordon equation is wrong or that such a particle did exist. Luckily, neither of these damaging scenarios were true thanks to the mechanism which came to be known as the Higgs mechanism introduced in 1964 by a total of 6 physicists spread across three different research groups(Robert Brout and François Englert, Peter Higgs, and Gerald Guralnik, C. Richard Hagen, and Tom Kibble). The Higgs mechanism takes into account local gauge invariance which the original theory did not. 
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.7]{couplings.png}
+	\end{center}
+	\caption{Diagram of how the couplings between the two fields would occur}
+	\label{fig:figure3}
+	\cite{ts}
+\end{figure} 
+
+We start by introduing the massless gauge field $A_\mu$ which we can accomadate in our four vector notation by introducing 
+\begin{equation}
+\mathcal{D}_\mu=\partial_\mu+i\frac{q}{hc}A_\mu
+\end{equation}	
+
+We will also use the equation 
+\begin{equation}
+\phi^\ast\phi=\phi^2_1+\phi^2_2
+\end{equation}
+
+Using these equations, our new Lagrangian becomes
+
+\begin{equation}
+\mathcal{L}=[(\partial_\mu-\mu+i\frac{q}{hc}A_\mu)\phi^\ast][(\partial^\mu-\mu+i\frac{q}{hc}A^\mu)\phi]+\frac{\mu^2(\phi_2^2+\phi_1^2)}{2}-\frac{\lambda^2(\phi_2^2+\phi_1^2)^2}{4}-\frac{F^(\mu\nu)F_(\mu\nu)}{16\pi}
+\end{equation}
+
+where
+
+\begin{equation}
+F^{\mu\nu}=\partial^{\mu}A^\nu-\partial^{\nu}A^\mu
+\end{equation}
+
+and similarly
+
+\begin{equation}
+F_{\mu\nu}=\partial_{\mu}A_\nu-\partial_{\nu}A_\mu
+\end{equation}
+
+We will be using this notation henceforth as shorthand. Now, repeating the process we did earlier, we can redefine our variables to be 
+
+\begin{equation}
+\xi=\phi_2
+\end{equation} 
+
+and	
+
+\begin{equation}
+\eta=\phi_1-\mu/\lambda
+\end{equation}
+
+This makes our new Lagrangian
+
+\begin{equation}
+\mathcal{L}=[\frac{(\partial_\mu\eta)(\partial^\mu\eta)}{2}-(\mu\eta)^2]+[\frac{(\partial_\mu\xi)(\partial^\mu\xi)}{2}]+[-\frac{F^(\mu\nu)F_(\mu\nu)}{16\pi}+\frac{(\frac{q\mu}{hc\lambda})^2}{2}A_{\mu}A^\mu]+[\frac{q}{hc}[\eta(\partial_{\mu}\xi)-\xi(\partial_{\mu}\eta)]A^\mu]+\frac{\mu\eta}{\lambda}(\frac{q}{hc})^2(A_{\mu}A^\mu)+\frac{(\frac{q}{hc})^2}{2}(\xi^2+\eta^2)(A_{\mu}A^\mu)-\lambda\mu(\eta^3+\eta\xi^2)-(\frac{\lambda(\eta^2+\xi^2)}{2})^2+(\frac{q\mu}{hc\lambda})(\partial_{\mu}\xi)A^\mu+(\mu^2/2\lambda)^2
+\end{equation}
+
+The first thing to notice in this Lagrangian is that there is a mass term of value 
+
+\begin{equation}
+m=\frac{2q\mu\surd{\pi}}{c^2\lambda}
+\end{equation}
+
+Finally, using the principle of local gauge invariance, we can come to the conclusion that the mass of $\xi$ is 0.
+
+\textbf{\underline{Conclusions}}
+
+Now that we have shown that the gauge fields acquire mass and that the Goldstone bosons have lost mass, we can arrive at the conclusion that the goldstone bosons were 'eaten' by the gauge field. What this basically means is that due to the gauge bosons having only 2 degrees of freedom, the third degree of freedom will come from the Goldstone bosons and this is what causes the gauge bosons to acquire a mass in the Lagrangian formulation of particle mechanics that we have just seen].  
+	\begin{thebibliography}{9}
+		\bibitem{ts}
+		D.J. Griffiths \textit{Introduction to elementary particles}
+		\bibitem{dr}
+		P.W. Higgs \textit{Broken symmetries and the masses of gauge bosons}
+		\bibitem{sd}
+		F Englert, R Brout \textit{Broken symmetry and the mass of gauge vector mesons}
+		\bibitem{abc}
+		G.S. Guralnik, C.R. Hagen, T.W.B. Kibble \textit{Global conservation laws and massless particles}
+	\end{thebibliography}
+
+\end{document}
